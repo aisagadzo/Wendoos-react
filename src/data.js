@@ -33,10 +33,9 @@ export const bewOptions =[
 
 export let segmentAds = [
     {
-        name:'VIVACOLOR 1',
+        title:'VIVACOLOR 1',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 1',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'1',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -55,10 +54,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 2',
+        title:'VIVACOLOR 2',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 2',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'2',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -77,10 +75,9 @@ export let segmentAds = [
         one: 0,
     },
     {
-        name:'VIVACOLOR 3',
+        title:'VIVACOLOR 3',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 3',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'3',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -99,10 +96,9 @@ export let segmentAds = [
         one: 0,
     },
     {
-        name:'VIVACOLOR 4',
+        title:'VIVACOLOR 4',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 3',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'3',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -121,10 +117,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 5',
+        title:'VIVACOLOR 5',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 2',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'2',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -143,10 +138,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 6',
+        title:'VIVACOLOR 6',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 5',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'5',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -165,10 +159,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 7',
+        title:'VIVACOLOR 7',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 4',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'4',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -187,10 +180,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 8',
+        title:'VIVACOLOR 8',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 5',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'5',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -209,10 +201,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 9',
+        title:'VIVACOLOR 9',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 3',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'3',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -231,10 +222,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 10',
+        title:'VIVACOLOR 10',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 1',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'1',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -253,10 +243,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 11',
+        title:'VIVACOLOR 11',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 2',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'2',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -275,10 +264,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 12',
+        title:'VIVACOLOR 12',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 6',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'6',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -297,10 +285,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 13',
+        title:'VIVACOLOR 13',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 6',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'6',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -319,10 +306,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 14',
+        title:'VIVACOLOR 14',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 4',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'4',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -341,10 +327,9 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 15',
+        title:'VIVACOLOR 15',
         imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 3',
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'3',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -363,9 +348,8 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 16', imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 6',
+        title:'VIVACOLOR 16', imgName:ImgAd1,
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'6',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -384,9 +368,8 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 17', imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 4',
+        title:'VIVACOLOR 17', imgName:ImgAd1,
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'4',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -405,9 +388,8 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 17', imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 1',
+        title:'VIVACOLOR 17', imgName:ImgAd1,
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'1',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -426,9 +408,8 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 18', imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 5',
+        title:'VIVACOLOR 18', imgName:ImgAd1,
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'5',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -447,9 +428,8 @@ export let segmentAds = [
         one: 0
     },
     {
-        name:'VIVACOLOR 19', imgName:ImgAd1,
-        imgLogoName:ImgAdLogo1,
-        ort:'ort 2',
+        title:'VIVACOLOR 19', imgName:ImgAd1,
+        imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'2',
         address:'Margaretenstr. 109',
         phone:'+43 1 5442045',
@@ -469,86 +449,86 @@ export let segmentAds = [
     },
 ]
 
-export const source = [
+export const sidebarGrupations = [
     {
-        "title": "Administration / Sachbearbeitung",
-        "price": segmentAds.filter(el=>el.grupation === '1').length,
-        "grupation": "1"
+        title: "Administration / Sachbearbeitung",
+        count: segmentAds.filter(el=>el.grupation === '1').length,
+        grupation: "1"
     },
     {
-        "title": "Bildung / Training / Erziehung ",
-        "price": segmentAds.filter(el=>el.grupation === '2').length,
-        "grupation": "2"
+        title: "Bildung / Training / Erziehung ",
+        count: segmentAds.filter(el=>el.grupation === '2').length,
+        grupation: "2"
     },
     {
-        "title": "Consulting",
-        "price": segmentAds.filter(el=>el.grupation === '3').length,
-        "grupation": "3"
+        title: "Consulting",
+        count: segmentAds.filter(el=>el.grupation === '3').length,
+        grupation: "3"
     },
     {
-        "title": "Einkauf / Logistik / Transport",
-        "price": segmentAds.filter(el=>el.grupation === '4').length,
-        "grupation": "4"
+        title: "Einkauf / Logistik / Transport",
+        count: segmentAds.filter(el=>el.grupation === '4').length,
+        grupation: "4"
     },
     {
-        "title": "Finanzwesen / Controlling ",
-        "price": segmentAds.filter(el=>el.grupation === '5').length,
-        "grupation": "5"
+        title: "Finanzwesen / Controlling ",
+        count: segmentAds.filter(el=>el.grupation === '5').length,
+        grupation: "5"
     },
     {
-        "title": "Gastronomie / Hotel / Tourismus",
-        "price": segmentAds.filter(el=>el.grupation === '6').length,
-        "grupation": "6"
+        title: "Gastronomie / Hotel / Tourismus",
+        count: segmentAds.filter(el=>el.grupation === '6').length,
+        grupation: "6"
     },
     {
-        "title": "Handwerk / Produktion ",
-        "price": segmentAds.filter(el=>el.grupation === '7').length,
-        "grupation": "7"
+        title: "Handwerk / Produktion ",
+        count: segmentAds.filter(el=>el.grupation === '7').length,
+        grupation: "7"
     },
     {
-        "title": "IT / Telekommunikation ",
-        "price": segmentAds.filter(el=>el.grupation === '8').length,
-        "grupation": "8"
+        title: "IT / Telekommunikation ",
+        count: segmentAds.filter(el=>el.grupation === '8').length,
+        grupation: "8"
     },
     {
-        "title": "Instandhaltung / Facility Management ",
-        "price": segmentAds.filter(el=>el.grupation === '9').length,
-        "grupation": "9"
+        title: "Instandhaltung / Facility Management ",
+        count: segmentAds.filter(el=>el.grupation === '9').length,
+        grupation: "9"
     },
     {
-        "title": "Landwirtschaft / Forstwirtschaft / Umwelt ",
-        "price": segmentAds.filter(el=>el.grupation === '10').length,
-        "grupation": "10"
+        title: "Landwirtschaft / Forstwirtschaft / Umwelt ",
+        count: segmentAds.filter(el=>el.grupation === '10').length,
+        grupation: "10"
     },
     {
-        "title": "Marketing/PR",
-        "price": segmentAds.filter(el=>el.grupation === '11').length,
-        "grupation": "11"
+        title: "Marketing/PR",
+        count: segmentAds.filter(el=>el.grupation === '11').length,
+        grupation: "11"
     },
     {
-        "title": "Medien / Verlagswesen / Kultur",
-        "price": segmentAds.filter(el=>el.grupation === '12').length,
-        "grupation": "12"
+        title: "Medien / Verlagswesen / Kultur",
+        count: segmentAds.filter(el=>el.grupation === '12').length,
+        grupation: "12"
     },
     {
-        "title": "Personalwesen ",
-        "price": segmentAds.filter(el=>el.grupation === '13').length,
-        "grupation": "13"
+        title: "Personalwesen ",
+        count: segmentAds.filter(el=>el.grupation === '13').length,
+        grupation: "13"
     },
     {
-        "title": "Rechtswesen ",
-        "price": segmentAds.filter(el=>el.grupation === '14').length,
-        "grupation": "14"
+        title: "Rechtswesen ",
+        count: segmentAds.filter(el=>el.grupation === '14').length,
+        grupation: "14"
     },
     {
-        "title": "Technik / Ingenieurwesen ",
-        "price": segmentAds.filter(el=>el.grupation === '15').length,
-        "grupation": "15"
+        title: "Technik / Ingenieurwesen ",
+        count: segmentAds.filter(el=>el.grupation === '15').length,
+        grupation: "15"
     },
     {
-        "title":"Vertrieb / Handel ",
-        "price": segmentAds.filter(el=>el.grupation === '16').length,
-        "grupation": "16"
+        title:"Vertrieb / Handel ",
+        count: segmentAds.filter(el=>el.grupation === '16').length,
+        grupation: "16"
     }
 
 ]

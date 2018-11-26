@@ -2,26 +2,32 @@ import React, { Component } from 'react';
 import { Header, Segment, Form, Container, Button, Menu, Sidebar, Ref, Image, Icon, Search} from 'semantic-ui-react';
 import _ from 'lodash'
 import Logo from './img/1.png';
-import SearchSidebar from './Search';
 import SidebarBottom from './img/2.png'
-import {source} from './data';
+import {segmentAds, sidebarGrupations} from './data';
 
 export default class SidebarWendoos extends React.Component {
     constructor() {
         super();
         this.state = {
             value:'',
+            segmentAds_:[]
         };
     }
 
 
     componentWillMount() {
         this.resetComponent()
+
+        let segmentAds_ = segmentAds.map(el => ({
+            ...el, description: sidebarGrupations.find(e => e.grupation === el.grupation).title,
+        }));
+        console.log('segmentAds_', segmentAds_);
+        this.setState({segmentAds_});
     }
 
     resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
 
-    handleResultSelect = (e, { result }) => this.setState({ value: result.title }, this.props.getHeaderText(result.title, result.grupation))
+    handleResultSelect = (e, { result }) => this.setState({ value: result.title }, this.props.getHeaderText(result.title, result.grupation, true))
 
     handleSearchChange = (e, { value }) => {
         this.setState({ isLoading: true, value })
@@ -34,7 +40,7 @@ export default class SidebarWendoos extends React.Component {
 
             this.setState({
                 isLoading: false,
-                results: _.filter(source, isMatch),
+                results: _.filter(this.state.segmentAds_, isMatch),
             })
         }, 300)
     }
@@ -52,7 +58,7 @@ export default class SidebarWendoos extends React.Component {
                     <a className="sidebarToggle" onClick={this.sidebarToggle} href="#"><Icon name='bars' size='large'/></a>
 
                     <div >
-                        <img className="logo" src={Logo}></img>
+                        <img className="logo" onClick={()=>window.location.reload()} src={Logo}></img>
                         <div style={{marginLeft: '7%' }}>
                         <Search
                             loading={isLoading}
@@ -74,12 +80,12 @@ export default class SidebarWendoos extends React.Component {
                             size='large'
                         >
                             <div>
-                                { source.map(el=>(
+                                { sidebarGrupations.map(el=>(
                                     <Menu.Item as='a'>
                                         <Menu.Header onClick={()=>{
-                                            this.props.getHeaderText(el.title, el.grupation);
+                                            this.props.getHeaderText(el.title, el.grupation, false);
                                             this.resetComponent();
-                                        }}>{el.title} <span style={{color:'#4183c4'}}>{el.price}</span></Menu.Header>
+                                        }}>{el.title} <span style={{color:'#4183c4'}}>{el.count}</span></Menu.Header>
                                     </Menu.Item>
                                 ))
                                 }

@@ -55,7 +55,7 @@ export default class SegmentAd extends React.Component {
             return (
                 <div style={{color: '#153753'}}>
                     <Segment raised color='blue'>
-                        <h2><b>{this.props.data.name}</b></h2>
+                        <h2><b>{this.props.data.title}</b></h2>
                         <Divider/>
                         <Grid divided>
                             <Grid.Row>
@@ -121,7 +121,7 @@ export default class SegmentAd extends React.Component {
             return (
                 <div style={{color: '#153753'}}>
                     <Segment raised color='blue'>
-                        <h2><b>{this.props.data.name}</b></h2>
+                        <h2><b>{this.props.data.title}</b></h2>
                         <Divider/>
                         <Grid columns={3} divided>
                             <Grid.Row>

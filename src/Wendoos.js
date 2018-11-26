@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import SidebarWendoos from "./Sidebar";
 import SegmentAd from './SegmentAd';
-import {bewOptions, ortOptions, segmentAds} from "./data";
+import {bewOptions, ortOptions, segmentAds, sidebarGrupations} from "./data";
 import Img1 from './img/3.png';
 import Img1_ from './img/3_.png';
 import Img2 from './img/4.png';
@@ -34,7 +34,8 @@ export default class Wendoos extends React.Component {
             topImageIndex: moment(new Date()).format('X')%this.topImages.length,
             rightImageIndex: moment(new Date()).format('X')%this.rightImages.length,
 
-            width: window.innerWidth
+            width: window.innerWidth,
+            isSearch: false
 
         };
         this.handlePaginationChange = this.handlePaginationChange.bind(this);
@@ -59,8 +60,9 @@ export default class Wendoos extends React.Component {
 
 
     componentDidMount(){
-        let segmentAds_ = segmentAds.map(el=>({
-            ...el, bewertungen: ((el.five*5 + el.four*4 + el.three*3 + el.two*2 + el.one)/(el.five + el.four + el.three + el.two + el.one)).toFixed(0)
+        let segmentAds_ = segmentAds.map(el => ({
+            ...el, ort: ortOptions.find(e => e.key === el.ortId).text,
+            bewertungen: ((el.five*5 + el.four*4 + el.three*3 + el.two*2 + el.one)/(el.five + el.four + el.three + el.two + el.one)).toFixed(0)
         }));
         console.log('segmentAds_', segmentAds_);
         this.setState({segmentAds_});
@@ -104,6 +106,7 @@ export default class Wendoos extends React.Component {
     }
 
     handleInputChange(e, { name, value }) {
+        if(this.state.isSearch) { this.setState({isSearch: false, headerText: '' ,grupation: '',bewertungen: '', ort: '',})}
         this.setState({ [name]: value, activePage: 1 });
     }
 
@@ -128,9 +131,11 @@ export default class Wendoos extends React.Component {
     }
 
     getFilterData(){
-        const {bewertungen, ort, grupation, segmentAds_} = this.state;
+        const {bewertungen, ort, grupation, segmentAds_, isSearch, headerText} = this.state;
         if(bewertungen === '0') this.setState({bewertungen: null});
         if(ort === '0') this.setState({ort: null});
+
+        if(isSearch) return segmentAds_.filter(el => el.title === headerText);
 
         if(grupation && !bewertungen && !ort) return segmentAds_.filter(el => el.grupation === grupation);
         else if(!grupation && bewertungen && !ort) return segmentAds_.filter(el => el.bewertungen === bewertungen);
@@ -154,7 +159,7 @@ export default class Wendoos extends React.Component {
                 <div className='topPageLine'></div>
                 <div>
                     <SidebarWendoos
-                        getHeaderText={(headerText, grupation) => {this.setState({headerText, grupation, activePage: 1}); window.scrollTo(0, 0);}}
+                        getHeaderText={(headerText, grupation, isSearch) => {this.setState({headerText, grupation, isSearch, activePage: 1}); window.scrollTo(0, 0);}}
                     />
                 </div>
                 <div className='page'>
@@ -180,13 +185,13 @@ export default class Wendoos extends React.Component {
 
                     <div className='leftPage'>
                        <Segment raised>
-                        <Header as='h3' style={{color: '#1c557d'}}>{this.state.headerText}
+                           {!this.state.isSearch && <Header as='h3' style={{color: '#1c557d'}}>{this.state.headerText}
                             {this.state.headerText && <Header style={{fontSize: '9px', marginRight:'0px'}} floated="right" >
                                 <Icon className="remove" color='orange' style={{cursor: 'pointer'}}
                                       onClick={()=> this.setState({headerText: null, grupation: null, activePage: 1})}
                                 />
                             </Header>}
-                        </Header>
+                        </Header>}
                             <Form size={isMobile ? 'mini' : 'small'}>
                                 <Form.Group widths='equal'>
                                     <Form.Field
