@@ -9,13 +9,15 @@ import moreInfoImg2 from './img/12.png';
 
 export const ortOptions =[
     {key:'0', value:'0', text:'Alles'},
-    {key:'1', value:'1', text:'ort 1'},
-    {key:'2', value:'2', text:'ort 2'},
-    {key:'3', value:'3', text:'ort 3'},
-    {key:'4', value:'4', text:'ort 4'},
-    {key:'5', value:'5', text:'ort 5'},
-    {key:'6', value:'6', text:'ort 6'},
-
+    {key:'1', value:'1', text:'Wien'},
+    {key:'2', value:'2', text:'Burgenland'},
+    {key:'3', value:'3', text:'Kärnten'},
+    {key:'4', value:'4', text:'Nieder­österreich'},
+    {key:'5', value:'5', text:'Ober­österreich'},
+    {key:'6', value:'6', text:'Steiermark'},
+    {key:'7', value:'7', text:'Salzburg'},
+    {key:'8', value:'8', text:'Tirol'},
+    {key:'9', value:'9', text:'Vorarlberg'},
 ]
 
 export const bewOptions =[
