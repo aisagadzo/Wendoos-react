@@ -135,7 +135,7 @@ export default class SegmentAd extends React.Component {
             return (
                 <div style={{color: '#153753'}}>
                     <Segment raised color='blue'>
-                        <h2><b>{this.props.data.title}</b></h2>
+                        <h3><b>{this.props.data.title}</b></h3>
                         <Divider/>
                         <Grid divided>
                             <Grid.Row>
@@ -158,7 +158,7 @@ export default class SegmentAd extends React.Component {
                             <Grid.Row>
                             <Grid.Column verticalAlign='middle' textAlign='center'>
                                     <div
-                                        style={{float: 'left', marginRight: '13px', height: '100%', marginTop: '50px'}}>
+                                        style={{height: '100%', }}>
                                         <img src={this.props.data.codeImg}/></div>
                                     <p><b> {this.state.bewertungenObj.rate} bewertungen
                                         <br/> <br/>5 sterne {this.state.bewertungenObj.five}

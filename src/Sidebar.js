@@ -10,12 +10,16 @@ export default class SidebarWendoos extends React.Component {
         super();
         this.state = {
             value:'',
-            segmentAds_:[]
+            segmentAds_:[],
+            width: window.innerWidth,
         };
     }
 
 
+
     componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+
         this.resetComponent()
 
         let segmentAds_ = segmentAds.map(el => ({
@@ -24,6 +28,15 @@ export default class SidebarWendoos extends React.Component {
         console.log('segmentAds_', segmentAds_);
         this.setState({segmentAds_});
     }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({width: window.innerWidth});
+    };
+
 
     resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
 
@@ -51,6 +64,8 @@ export default class SidebarWendoos extends React.Component {
     }
 
     render() {
+        const {width} = this.state;
+        const isMobile = width <= 768;
         const { isLoading, value, results } = this.state
         return (
             <div>

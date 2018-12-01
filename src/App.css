@@ -115,12 +115,12 @@
     overflow-y: scroll;
     overflow-x: hidden;
     position: fixed;
-    width: 50%;
+    width: 100%;
     height: 100%;
   }
 
   .sidebar-hidden .page{
-    margin-left:80%;
+    margin-left:100%;
     overflow: hidden;
   }
 
@@ -171,6 +171,23 @@
     width: 63%;
   }
 
+}
+
+@media (max-width: 400px) {
+  .hawdText{
+    color: #153753;
+    position: absolute;
+    top: 90%;
+    right:30%;
+    transform: translate(15%, -80%);
+    text-align: center;
+    line-height: 1.2;
+    font-size: 6px;
+  }
+  .fontSizeHawd{
+    font-size: 1.1em;
+    line-height: 0.1;
+  }
 }
 
 

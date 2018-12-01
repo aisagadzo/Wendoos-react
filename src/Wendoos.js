@@ -184,14 +184,14 @@ export default class Wendoos extends React.Component {
 
                     <div className='leftPage'>
                        <Segment raised>
-                           {!this.state.isSearch && <Header as='h3' style={{color: '#1c557d'}}>{this.state.headerText}
-                            {this.state.headerText && <Header style={{fontSize: '9px', marginRight:'0px'}} floated="right" >
+                           {!this.state.isSearch && <Header as={isMobile ? 'h5' : 'h3'} style={{color: '#1c557d'}}>{this.state.headerText}
+                            {this.state.headerText && <Header style={{fontSize: isMobile ? '6px' : '9px', marginRight:'0px'}} floated="right" >
                                 <Icon className="remove" color='orange' style={{cursor: 'pointer'}}
                                       onClick={()=> this.setState({headerText: null, grupation: null, activePage: 1})}
                                 />
                             </Header>}
                         </Header>}
-                            <Form size={isMobile ? 'mini' : 'small'}>
+                            <Form size={isMobile ? 'mini' : 'small'} >
                                 <Form.Group widths='equal'>
                                     <Form.Field
                                         value={this.state.ort}
