@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/SegmentAd.js" line="187" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/src/SegmentAd.js" line="147" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/src/Sidebar.js" line="3" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a318446-6ac1-48e3-a16e-c0514d8218ef" name="Default" comment="">
@@ -10,6 +11,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SegmentAd.js" afterPath="$PROJECT_DIR$/src/SegmentAd.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sidebar.js" afterPath="$PROJECT_DIR$/src/Sidebar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wendoos.js" afterPath="$PROJECT_DIR$/src/Wendoos.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data.js" afterPath="$PROJECT_DIR$/src/data.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,31 +28,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Wendoos.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Wendoos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-208">
-              <caret line="194" column="59" lean-forward="true" selection-start-line="194" selection-start-column="59" selection-end-line="194" selection-end-column="59" />
+            <state relative-caret-position="-349">
+              <caret line="122" column="8" lean-forward="false" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SegmentAd.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SegmentAd.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SegmentAd.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="160" column="48" lean-forward="false" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
+            <state relative-caret-position="535">
+              <caret line="120" column="94" lean-forward="false" selection-start-line="120" selection-start-column="91" selection-end-line="120" selection-end-column="94" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -59,9 +73,11 @@
       <file leaf-file-name="Sidebar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sidebar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="99" column="53" lean-forward="false" selection-start-line="99" selection-start-column="53" selection-end-line="99" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,17 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changeBackground</find>
-      <find>topImages</find>
-      <find>5000</find>
-      <find>sidebar-hidden</find>
-      <find>address:'Margaretenstr. 109',</find>
-      <find>toast</find>
-      <find>pointer</find>
-      <find>sidebar</find>
-      <find>logo</find>
-      <find>&quot;grupation&quot;</find>
-      <find>name:'VIVACO</find>
       <find>name</find>
       <find>imgLogoName:ImgAdLogo1,</find>
       <find>source</find>
@@ -98,15 +103,26 @@
       <find>handleInputChange</find>
       <find>price</find>
       <find>TextReader</find>
-      <find>bewertungen</find>
       <find>7000</find>
-      <find>hawd</find>
       <find>sear</find>
       <find>getHe</find>
       <find>ismobile</find>
       <find>width</find>
       <find>left</find>
       <find>header</find>
+      <find>logo</find>
+      <find>segmentAds_</find>
+      <find>bewertungen</find>
+      <find>rightImages</find>
+      <find>sideba</find>
+      <find>topImages</find>
+      <find>pagin</find>
+      <find>sidebar</find>
+      <find>top</find>
+      <find>tog</find>
+      <find>sidebarToggle</find>
+      <find>handlePaginationChange</find>
+      <find>hawd</find>
     </findStrings>
     <replaceStrings>
       <replace>Value</replace>
@@ -246,17 +262,17 @@
         <option value="$PROJECT_DIR$/src/Search.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/manifest.json" />
-        <option value="$PROJECT_DIR$/src/data.js" />
         <option value="$PROJECT_DIR$/src/test.txt" />
         <option value="$PROJECT_DIR$/src/SegmentAds.json" />
         <option value="$PROJECT_DIR$/src/TextReader.js" />
         <option value="$PROJECT_DIR$/src/dataa.json" />
         <option value="$PROJECT_DIR$/src/myTxt.txt" />
         <option value="$PROJECT_DIR$/src/TextFileReader.js" />
-        <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/Sidebar.js" />
-        <option value="$PROJECT_DIR$/src/Wendoos.js" />
         <option value="$PROJECT_DIR$/src/SegmentAd.js" />
+        <option value="$PROJECT_DIR$/src/data.js" />
+        <option value="$PROJECT_DIR$/src/Wendoos.js" />
+        <option value="$PROJECT_DIR$/src/Sidebar.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
       </list>
     </option>
   </component>
@@ -321,20 +337,20 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/react-blur-admin-master" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/registar/build" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aisha\WebstormProjects\test1\src" />
+      <recent name="C:\Users\aisha\WebstormProjects\test1\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\aisha\WebstormProjects\test1\public" />
       <recent name="favicon.ico" />
       <recent name="C:\Users\aisha\WebstormProjects\test1\src\img" />
       <recent name="C:\Users\aisha\WebstormProjects\test1\src\img\logo" />
       <recent name="C:\Users\aisha\WebstormProjects\test1\src\logo" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\aisha\WebstormProjects\test1\public" />
-      <recent name="C:\Users\aisha\WebstormProjects\test1\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -434,7 +450,7 @@
       <workItem from="1542754447571" duration="2937000" />
       <workItem from="1542823162769" duration="11970000" />
       <workItem from="1542835565205" duration="836000" />
-      <workItem from="1543242154551" duration="19914000" />
+      <workItem from="1543242154551" duration="36069000" />
     </task>
     <task id="LOCAL-00001" summary="fixes...">
       <created>1543247520004</created>
@@ -450,11 +466,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543663937297</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="responsive fix...">
+      <created>1543667179844</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543667179844</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433296000" />
+    <option name="totallyTimeSpent" value="449451000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,7 +500,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30729166" sideWeight="0.40261865" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15057284" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.48772505" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.058919802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2487725" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22023809" sideWeight="0.31751227" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -515,7 +538,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixes..." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes..." />
+    <MESSAGE value="responsive fix..." />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive fix..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,11 +580,6 @@
         <state relative-caret-position="34">
           <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/semantic-ui-react/dist/es/elements/Segment/Segment.js">
@@ -664,16 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="355" column="27" lean-forward="false" selection-start-line="355" selection-start-column="27" selection-end-line="355" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -714,6 +723,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -722,34 +736,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="99" column="53" lean-forward="false" selection-start-line="99" selection-start-column="53" selection-end-line="99" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Wendoos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="194" column="59" lean-forward="true" selection-start-line="194" selection-start-column="59" selection-end-line="194" selection-end-column="59" />
+        <state relative-caret-position="-349">
+          <caret line="122" column="8" lean-forward="false" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SegmentAd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="160" column="48" lean-forward="false" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
+        <state relative-caret-position="535">
+          <caret line="120" column="94" lean-forward="false" selection-start-line="120" selection-start-column="91" selection-end-line="120" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding />
         </state>
       </provider>

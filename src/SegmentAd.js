@@ -54,48 +54,6 @@ export default class SegmentAd extends React.Component {
         }
         this.setState({ oneRate: true})
 
-        if(rating === 1) this.setState(prevState => ({
-            bewertungenObj: {
-                ...prevState.bewertungenObj,
-                one: bewertungenObj.one + 1,
-                bewertungen: bewertungenObj.bewertungen === 0 ? 1 : (bewertungenObj.bewertungen + 1)/2
-            }
-        }))
-        if(rating === 2) this.setState(prevState => ({
-            bewertungenObj: {
-                ...prevState.bewertungenObj,
-                two: bewertungenObj.two + 1,
-                bewertungen:  bewertungenObj.bewertungen === 0 ? 2 : (bewertungenObj.bewertungen + 2)/2
-            }
-        }))
-        if(rating === 3) this.setState(prevState => ({
-            bewertungenObj: {
-                ...prevState.bewertungenObj,
-                three: bewertungenObj.three + 1,
-                bewertungen:  bewertungenObj.bewertungen === 0 ? 3 : (bewertungenObj.bewertungen + 3)/2
-            }
-        }))
-        if(rating === 4) this.setState(prevState => ({
-            bewertungenObj: {
-                ...prevState.bewertungenObj,
-                four: bewertungenObj.four + 1,
-                bewertungen:  bewertungenObj.bewertungen === 0 ? 4 : (bewertungenObj.bewertungen + 4)/2
-            }
-        }))
-        if(rating === 5) this.setState(prevState => ({
-            bewertungenObj: {
-                ...prevState.bewertungenObj,
-                five: bewertungenObj.five + 1,
-                bewertungen:  bewertungenObj.bewertungen === 0 ? 5 : (bewertungenObj.bewertungen + 5)/2
-            }
-        }))
-
-        this.setState(prevState => ({
-            bewertungenObj: {
-                ...prevState.bewertungenObj,
-                rate: bewertungenObj.rate + 1
-            }
-        }))
 
         if(localStorage.getItem(`${this.props.data.title}`)){
             let bewertungenObj_ = {
@@ -108,6 +66,7 @@ export default class SegmentAd extends React.Component {
                 bewertungen: ((bewertungenObj.five*5 + bewertungenObj.four*4 + bewertungenObj.three*3 + bewertungenObj.two*2 + bewertungenObj.one + rating)/(bewertungenObj.rate + 1)).toFixed(0)
             }
             console.log('bewertungenObj_', bewertungenObj_);
+            this.setState({bewertungenObj: bewertungenObj_ });
             localStorage.removeItem(`${this.props.data.title}`);
             localStorage.setItem(`${this.props.data.title}`, JSON.stringify(bewertungenObj_));
         }
@@ -123,6 +82,7 @@ export default class SegmentAd extends React.Component {
                 bewertungen: rating
             }
             localStorage.setItem(`${this.props.data.title}`, JSON.stringify(bewertungenObj));
+            this.setState({bewertungenObj})
         }
     }
 
@@ -158,7 +118,7 @@ export default class SegmentAd extends React.Component {
                             <Grid.Row>
                             <Grid.Column verticalAlign='middle' textAlign='center'>
                                     <div
-                                        style={{height: '100%', }}>
+                                        style={{ marginRight: '0px', height: '100%', marginTop: '1px'}}>
                                         <img src={this.props.data.codeImg}/></div>
                                     <p><b> {this.state.bewertungenObj.rate} bewertungen
                                         <br/> <br/>5 sterne {this.state.bewertungenObj.five}

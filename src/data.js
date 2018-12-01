@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
-import ImgAd1 from './img/7.png';
-import ImgAdLogo1 from './img/9.png';
-import codeImg1 from './img/10.png';
-import moreInfoImg1 from './img/7.png';
-import moreInfoImg2 from './img/12.png';
+// import ImgAd1 from './img/7.png';
+// import ImgAdLogo1 from './img/9.png';
+// import codeImg1 from './img/10.png';
+// import moreInfoImg1 from './img/7.png';
+// import moreInfoImg2 from './img/12.png';
+
+const ImgAd1 = 'http://hawd-design.net/rijad/wendoos-2/images/7.png';
+const ImgAdLogo1 = 'http://hawd-design.net/rijad/wendoos-2/images/9.png';
+const codeImg1 = 'http://hawd-design.net/rijad/wendoos-2/images/10.png';
+const moreInfoImg1 = 'http://hawd-design.net/rijad/wendoos-2/images/7.png';
+const moreInfoImg2 = 'http://hawd-design.net/rijad/wendoos-2/images/12.png';
 
 
 
@@ -49,6 +55,8 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '1',
+        bewertungen: localStorage.getItem('VIVACOLOR 1') ? JSON.parse(localStorage.getItem('VIVACOLOR 1')).bewertungen : 0
+
     },
     {
         title:'VIVACOLOR 2',

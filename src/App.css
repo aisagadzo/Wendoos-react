@@ -20,11 +20,10 @@
 .logo{
   margin-left: 10%;
   margin-right: 2%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 50%;
+  margin-bottom: 30%;
   width: 80%;
   height: 80%;
-  cursor: pointer;
 }
 
 .sidebarBottom{
@@ -53,6 +52,7 @@
 
 .sidebarToggle{
   float: right;
+  position: fixed;
 }
 
 .topPageLine{
@@ -131,7 +131,6 @@
     margin-bottom: 10%;
     width: 80%;
     height: 80%;
-    cursor: pointer;
   }
 
   .sidebarBottom{
@@ -148,11 +147,11 @@
     color: #153753;
     position: absolute;
     top: 90%;
-    right:30%;
+    right:25%;
     transform: translate(15%, -80%);
     text-align: center;
     line-height: 1.2;
-    font-size: 7px;
+    font-size: 6px;
   }
 
   .fontSizeHawd{
@@ -171,23 +170,6 @@
     width: 63%;
   }
 
-}
-
-@media (max-width: 400px) {
-  .hawdText{
-    color: #153753;
-    position: absolute;
-    top: 90%;
-    right:30%;
-    transform: translate(15%, -80%);
-    text-align: center;
-    line-height: 1.2;
-    font-size: 6px;
-  }
-  .fontSizeHawd{
-    font-size: 1.1em;
-    line-height: 0.1;
-  }
 }
 
 

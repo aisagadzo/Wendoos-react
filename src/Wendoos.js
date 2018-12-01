@@ -5,14 +5,23 @@ import moment from 'moment';
 import SidebarWendoos from "./Sidebar";
 import SegmentAd from './SegmentAd';
 import {bewOptions, ortOptions, segmentAds, sidebarGrupations} from "./data";
-import Img1 from './img/3.png';
-import Img1_ from './img/3_.png';
-import Img2 from './img/4.png';
-import Img3 from './img/5.png';
-import Img4 from './img/13.png';
-import Img5 from './img/14.png';
-import Img6 from './img/15.png';
-import Img7 from './img/16.png';
+//import Img1 from './img/3.png';
+//import Img1_ from './img/3_.png';
+//import Img2 from './img/4.png';
+//import Img3 from './img/5.png';
+//import Img4 from './img/13.png';
+//import Img5 from './img/14.png';
+//import Img6 from './img/15.png';
+//import Img7 from './img/16.png';
+
+const Img1 = "http://hawd-design.net/rijad/wendoos-2/images/3.png";
+const Img1_ = "http://hawd-design.net/rijad/wendoos-2/images/3_.png";
+const Img2 = "http://hawd-design.net/rijad/wendoos-2/images/4.png";
+const Img3 = "http://hawd-design.net/rijad/wendoos-2/images/5.png";
+const Img4 = "http://hawd-design.net/rijad/wendoos-2/images/13.png";
+const Img5 = "http://hawd-design.net/rijad/wendoos-2/images/14.png";
+const Img6 = "http://hawd-design.net/rijad/wendoos-2/images/15.png";
+const Img7 = "http://hawd-design.net/rijad/wendoos-2/images/16.png";
 
 const numberOfSegmentAds = 10;
 
@@ -61,7 +70,7 @@ export default class Wendoos extends React.Component {
 
     componentDidMount(){
         let segmentAds_ = segmentAds.map(el => ({
-            ...el, ort: ortOptions.find(e => e.key === el.ortId).text,
+            ...el, ort: ortOptions.find(e => e.key === el.ortId).text
         }));
         console.log('segmentAds_', segmentAds_);
         this.setState({segmentAds_});

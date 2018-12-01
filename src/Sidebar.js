@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Header, Segment, Form, Container, Button, Menu, Sidebar, Ref, Image, Icon, Search} from 'semantic-ui-react';
 import _ from 'lodash'
-import Logo from './img/1.png';
-import SidebarBottom from './img/2.png'
+//import Logo from './img/1.png';
+// import SidebarBottom from './img/2.png'
 import {segmentAds, sidebarGrupations} from './data';
+
+const Logo = "http://hawd-design.net/rijad/wendoos-2/images/1.png";
+const SidebarBottom = "http://hawd-design.net/rijad/wendoos-2/images/2.png";
 
 export default class SidebarWendoos extends React.Component {
     constructor() {
@@ -12,9 +15,9 @@ export default class SidebarWendoos extends React.Component {
             value:'',
             segmentAds_:[],
             width: window.innerWidth,
+            hide: false,
         };
     }
-
 
 
     componentWillMount() {
@@ -70,9 +73,10 @@ export default class SidebarWendoos extends React.Component {
         return (
             <div>
                 <div className="sidebar">
-                    <a className="sidebarToggle" onClick={this.sidebarToggle} href="#"><Icon name='bars' size='large'/></a>
 
                     <div >
+                        <div style={{float:'right', marginRight:'25px'}}><a className="sidebarToggle" onClick={this.sidebarToggle} href="#"><Icon name='bars' size='large'/></a></div>
+
                         <img className="logo" onClick={()=>window.location.reload()} src={Logo}></img>
                         <div style={{marginLeft: '7%' }}>
                         <Search
@@ -100,6 +104,8 @@ export default class SidebarWendoos extends React.Component {
                                         <Menu.Header onClick={()=>{
                                             this.props.getHeaderText(el.title, el.grupation, false);
                                             this.resetComponent();
+                                            window.scrollTo(0, 0);
+                                            if (isMobile) document.body.classList.toggle('sidebar-hidden');
                                         }}>{el.title} <span style={{color:'#4183c4'}}>{el.count}</span></Menu.Header>
                                     </Menu.Item>
                                 ))
