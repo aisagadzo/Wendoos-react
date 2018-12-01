@@ -62,19 +62,18 @@ export default class Wendoos extends React.Component {
     componentDidMount(){
         let segmentAds_ = segmentAds.map(el => ({
             ...el, ort: ortOptions.find(e => e.key === el.ortId).text,
-            bewertungen: ((el.five*5 + el.four*4 + el.three*3 + el.two*2 + el.one)/(el.five + el.four + el.three + el.two + el.one)).toFixed(0)
         }));
         console.log('segmentAds_', segmentAds_);
         this.setState({segmentAds_});
 
         this.timeout = setTimeout(
             this.changeTopImage,
-             7000
+             30000
         )
 
         this.timeout = setTimeout(
             this.changeRightImage,
-            7000
+            30000
         )
 
     }
@@ -87,7 +86,7 @@ export default class Wendoos extends React.Component {
         }, function () {
             this.timeout = setTimeout(
                 this.changeTopImage,
-                7000
+                30000
             )
         })
     }
@@ -100,7 +99,7 @@ export default class Wendoos extends React.Component {
         }, function () {
             this.timeout = setTimeout(
                 this.changeRightImage,
-                7000
+                30000
             )
         })
     }

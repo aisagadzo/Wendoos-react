@@ -7,6 +7,8 @@ import moreInfoImg1 from './img/7.png';
 import moreInfoImg2 from './img/12.png';
 
 
+
+
 export const ortOptions =[
     {key:'0', value:'0', text:'Alles'},
     {key:'1', value:'1', text:'Wien'},
@@ -47,11 +49,6 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '1',
-        five:117,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0
     },
     {
         title:'VIVACOLOR 2',
@@ -68,11 +65,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '2',
-        five:117,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0,
+        bewertungen: localStorage.getItem('VIVACOLOR 2') ? JSON.parse(localStorage.getItem('VIVACOLOR 2')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 3',
@@ -89,11 +82,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '3',
-        five:27,
-        four: 15,
-        three: 4,
-        two: 0,
-        one: 0,
+        bewertungen: localStorage.getItem('VIVACOLOR 3') ? JSON.parse(localStorage.getItem('VIVACOLOR 3')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 4',
@@ -110,11 +99,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '4',
-        five:7,
-        four: 25,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 4') ? JSON.parse(localStorage.getItem('VIVACOLOR 4')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 5',
@@ -131,11 +116,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '5',
-        five:117,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 5') ? JSON.parse(localStorage.getItem('VIVACOLOR 5')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 6',
@@ -152,11 +133,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '6',
-        five:117,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 6') ? JSON.parse(localStorage.getItem('VIVACOLOR 6')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 7',
@@ -173,11 +150,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '7',
-        five:17,
-        four: 15,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 7') ? JSON.parse(localStorage.getItem('VIVACOLOR 7')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 8',
@@ -194,11 +167,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '8',
-        five:11,
-        four: 15,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 8') ? JSON.parse(localStorage.getItem('VIVACOLOR 8')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 9',
@@ -215,11 +184,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '9',
-        five:11,
-        four: 5,
-        three: 14,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 9') ? JSON.parse(localStorage.getItem('VIVACOLOR 9')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 10',
@@ -236,11 +201,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '10',
-        five:11,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 10') ? JSON.parse(localStorage.getItem('VIVACOLOR 10')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 11',
@@ -257,11 +218,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '11',
-        five:117,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 11') ? JSON.parse(localStorage.getItem('VIVACOLOR 11')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 12',
@@ -278,11 +235,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '12',
-        five:11,
-        four: 170,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 12') ? JSON.parse(localStorage.getItem('VIVACOLOR 12')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 13',
@@ -299,11 +252,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '13',
-        five:100,
-        four: 50,
-        three: 40,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 13') ? JSON.parse(localStorage.getItem('VIVACOLOR 13')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 14',
@@ -320,11 +269,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '14',
-        five:117,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 14') ? JSON.parse(localStorage.getItem('VIVACOLOR 14')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 15',
@@ -341,11 +286,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '15',
-        five:17,
-        four: 115,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 15') ? JSON.parse(localStorage.getItem('VIVACOLOR 15')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 16', imgName:ImgAd1,
@@ -361,11 +302,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '16',
-        five:7,
-        four: 5,
-        three: 14,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 16') ? JSON.parse(localStorage.getItem('VIVACOLOR 16')).bewertungen : 0
     },
     {
         title:'VIVACOLOR 17', imgName:ImgAd1,
@@ -381,14 +318,10 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '1',
-        five:117,
-        four: 5,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 17') ? JSON.parse(localStorage.getItem('VIVACOLOR 17')).bewertungen : 0
     },
     {
-        title:'VIVACOLOR 17', imgName:ImgAd1,
+        title:'VIVACOLOR 18', imgName:ImgAd1,
         imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'1',
         address:'Margaretenstr. 109',
@@ -401,14 +334,10 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '2',
-        five:7,
-        four: 5,
-        three: 100,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 18') ? JSON.parse(localStorage.getItem('VIVACOLOR 18')).bewertungen : 0
     },
     {
-        title:'VIVACOLOR 18', imgName:ImgAd1,
+        title:'VIVACOLOR 19', imgName:ImgAd1,
         imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'5',
         address:'Margaretenstr. 109',
@@ -421,14 +350,10 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '3',
-        five:117,
-        four: 150,
-        three: 40,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 19') ? JSON.parse(localStorage.getItem('VIVACOLOR 19')).bewertungen : 0
     },
     {
-        title:'VIVACOLOR 19', imgName:ImgAd1,
+        title:'VIVACOLOR 20', imgName:ImgAd1,
         imgLogoName:ImgAdLogo1, image:ImgAdLogo1,
         ortId:'2',
         address:'Margaretenstr. 109',
@@ -441,11 +366,7 @@ export let segmentAds = [
         moreInfoImg1:moreInfoImg1,
         moreInfoImg2:moreInfoImg2,
         grupation: '4',
-        five:7,
-        four: 15,
-        three: 4,
-        two: 0,
-        one: 0
+        bewertungen: localStorage.getItem('VIVACOLOR 20') ? JSON.parse(localStorage.getItem('VIVACOLOR 20')).bewertungen : 0
     },
 ]
 

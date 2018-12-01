@@ -8,21 +8,33 @@ export default class SegmentAd extends React.Component {
             value: '',
             showMore: false,
 
-            one: '',
-            two:'',
-            three:'',
-            four:'',
-            five:'',
-            rate:'',
+
 
             oneRate: false,
+
+            bewertungenObj:{
+                one: 0,
+                two:0,
+                three:0,
+                four:0,
+                five:0,
+                rate:0,
+                bewertungen:0
+            },
 
             width: window.innerWidth
         };
     }
 
+
     componentWillMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
+
+        if(localStorage.getItem(`${this.props.data.title}`)){
+            let bewertungenObj = JSON.parse(localStorage.getItem(`${this.props.data.title}`));
+            console.log('bewertungenObj', bewertungenObj);
+            this.setState({bewertungenObj})
+        }
     }
 
     componentWillUnmount() {
@@ -34,15 +46,84 @@ export default class SegmentAd extends React.Component {
     };
 
     handleRate = (e, { rating }) => {
+        const {bewertungenObj} = this.state;
+
+        //just one rate for one company
         if(this.state.oneRate){
             return;
         }
-        this.setState({rate: 1, oneRate: true})
-        if(rating === 1) this.setState({one: 1})
-        if(rating === 2) this.setState({two: 1})
-        if(rating === 3) this.setState({three: 1})
-        if(rating === 4) this.setState({four: 1})
-        if(rating === 5) this.setState({five: 1})
+        this.setState({ oneRate: true})
+
+        if(rating === 1) this.setState(prevState => ({
+            bewertungenObj: {
+                ...prevState.bewertungenObj,
+                one: bewertungenObj.one + 1,
+                bewertungen: bewertungenObj.bewertungen === 0 ? 1 : (bewertungenObj.bewertungen + 1)/2
+            }
+        }))
+        if(rating === 2) this.setState(prevState => ({
+            bewertungenObj: {
+                ...prevState.bewertungenObj,
+                two: bewertungenObj.two + 1,
+                bewertungen:  bewertungenObj.bewertungen === 0 ? 2 : (bewertungenObj.bewertungen + 2)/2
+            }
+        }))
+        if(rating === 3) this.setState(prevState => ({
+            bewertungenObj: {
+                ...prevState.bewertungenObj,
+                three: bewertungenObj.three + 1,
+                bewertungen:  bewertungenObj.bewertungen === 0 ? 3 : (bewertungenObj.bewertungen + 3)/2
+            }
+        }))
+        if(rating === 4) this.setState(prevState => ({
+            bewertungenObj: {
+                ...prevState.bewertungenObj,
+                four: bewertungenObj.four + 1,
+                bewertungen:  bewertungenObj.bewertungen === 0 ? 4 : (bewertungenObj.bewertungen + 4)/2
+            }
+        }))
+        if(rating === 5) this.setState(prevState => ({
+            bewertungenObj: {
+                ...prevState.bewertungenObj,
+                five: bewertungenObj.five + 1,
+                bewertungen:  bewertungenObj.bewertungen === 0 ? 5 : (bewertungenObj.bewertungen + 5)/2
+            }
+        }))
+
+        this.setState(prevState => ({
+            bewertungenObj: {
+                ...prevState.bewertungenObj,
+                rate: bewertungenObj.rate + 1
+            }
+        }))
+
+        if(localStorage.getItem(`${this.props.data.title}`)){
+            let bewertungenObj_ = {
+                one: rating === 1 ? 1 + bewertungenObj.one : bewertungenObj.one,
+                two: rating === 2 ? 1 + bewertungenObj.two : bewertungenObj.two,
+                three: rating === 3 ? 1 + bewertungenObj.three : bewertungenObj.three,
+                four: rating === 4 ? 1 + bewertungenObj.four : bewertungenObj.four,
+                five: rating === 5 ? 1 + bewertungenObj.five : bewertungenObj.five,
+                rate: bewertungenObj.rate + 1,
+                bewertungen: ((bewertungenObj.five*5 + bewertungenObj.four*4 + bewertungenObj.three*3 + bewertungenObj.two*2 + bewertungenObj.one + rating)/(bewertungenObj.rate + 1)).toFixed(0)
+            }
+            console.log('bewertungenObj_', bewertungenObj_);
+            localStorage.removeItem(`${this.props.data.title}`);
+            localStorage.setItem(`${this.props.data.title}`, JSON.stringify(bewertungenObj_));
+        }
+        else
+        {
+            let bewertungenObj = {
+                one: rating === 1 ? 1 : 0,
+                two: rating === 2 ? 1 : 0,
+                three: rating === 3 ? 1 : 0,
+                four: rating === 4 ? 1 : 0,
+                five: rating === 5 ? 1 : 0,
+                rate: 1,
+                bewertungen: rating
+            }
+            localStorage.setItem(`${this.props.data.title}`, JSON.stringify(bewertungenObj));
+        }
     }
 
 
@@ -50,7 +131,6 @@ export default class SegmentAd extends React.Component {
         const {data} = this.props;
         const {width} = this.state;
         const isMobile = width <= 500;
-
         if (isMobile) {
             return (
                 <div style={{color: '#153753'}}>
@@ -80,13 +160,13 @@ export default class SegmentAd extends React.Component {
                                     <div
                                         style={{float: 'left', marginRight: '13px', height: '100%', marginTop: '50px'}}>
                                         <img src={this.props.data.codeImg}/></div>
-                                    <p><b> {data.five + data.four + data.three + data.two + data.one + this.state.rate} bewertungen
-                                        <br/> <br/>5 sterne {data.five + this.state.five}
-                                        <br/>4 sterne {data.four + this.state.four}
-                                        <br/>3 sterne {data.three + this.state.three}
-                                        <br/>2 sterne {data.two + this.state.two}
-                                        <br/>1 sterne {data.one + this.state.one}</b></p>
-                                    <Rating icon='star' rating={data.bewertungen} maxRating={5} onRate={this.handleRate}/>
+                                    <p><b> {this.state.bewertungenObj.rate} bewertungen
+                                        <br/> <br/>5 sterne {this.state.bewertungenObj.five}
+                                        <br/>4 sterne {this.state.bewertungenObj.four}
+                                        <br/>3 sterne {this.state.bewertungenObj.three}
+                                        <br/>2 sterne {this.state.bewertungenObj.two}
+                                        <br/>1 sterne {this.state.bewertungenObj.one}</b></p>
+                                    <Rating icon='star' rating={this.state.bewertungenObj.bewertungen} maxRating={5} onRate={this.handleRate}/>
                                 <br/>
                                 <Divider/>
                                 <Icon link name={this.state.showMore ? 'chevron circle up' : 'chevron circle down'}
@@ -144,13 +224,13 @@ export default class SegmentAd extends React.Component {
                                     <div
                                         style={{float: 'left', marginRight: '13px', height: '100%', marginTop: '20px'}}>
                                         <img src={this.props.data.codeImg}/></div>
-                                    <p><b> {data.five + data.four + data.three + data.two + data.one + this.state.rate} bewertungen
-                                        <br/> <br/>5 sterne {data.five + this.state.five}
-                                        <br/>4 sterne {data.four + this.state.four}
-                                        <br/>3 sterne {data.three + this.state.three}
-                                        <br/>2 sterne {data.two + this.state.two}
-                                        <br/>1 sterne {data.one + this.state.one}</b></p>
-                                    <Rating icon='star' rating={data.bewertungen} maxRating={5} onRate={this.handleRate}/>
+                                    <p><b> {this.state.bewertungenObj.rate} bewertungen
+                                        <br/> <br/>5 sterne {this.state.bewertungenObj.five}
+                                        <br/>4 sterne {this.state.bewertungenObj.four}
+                                        <br/>3 sterne {this.state.bewertungenObj.three}
+                                        <br/>2 sterne {this.state.bewertungenObj.two}
+                                        <br/>1 sterne {this.state.bewertungenObj.one}</b></p>
+                                    <Rating icon='star' rating={this.state.bewertungenObj.bewertungen} maxRating={5} onRate={this.handleRate}/>
                                 </Grid.Column>
                             </Grid.Row>
                             {this.state.showMore && <Divider/>}
