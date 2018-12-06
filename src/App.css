@@ -120,7 +120,7 @@
   }
 
   .sidebar-hidden .page{
-    margin-left:100%;
+    width: 0px;
     overflow: hidden;
   }
 

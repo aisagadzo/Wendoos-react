@@ -8,20 +8,6 @@ export default class SegmentAd extends React.Component {
             value: '',
             showMore: false,
 
-
-
-            oneRate: false,
-
-            bewertungenObj:{
-                one: 0,
-                two:0,
-                three:0,
-                four:0,
-                five:0,
-                rate:0,
-                bewertungen:0
-            },
-
             width: window.innerWidth
         };
     }
@@ -29,12 +15,6 @@ export default class SegmentAd extends React.Component {
 
     componentWillMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
-
-        if(localStorage.getItem(`${this.props.data.title}`)){
-            let bewertungenObj = JSON.parse(localStorage.getItem(`${this.props.data.title}`));
-            console.log('bewertungenObj', bewertungenObj);
-            this.setState({bewertungenObj})
-        }
     }
 
     componentWillUnmount() {
@@ -46,44 +26,6 @@ export default class SegmentAd extends React.Component {
     };
 
     handleRate = (e, { rating }) => {
-        const {bewertungenObj} = this.state;
-
-        //just one rate for one company
-        if(this.state.oneRate){
-            return;
-        }
-        this.setState({ oneRate: true})
-
-
-        if(localStorage.getItem(`${this.props.data.title}`)){
-            let bewertungenObj_ = {
-                one: rating === 1 ? 1 + bewertungenObj.one : bewertungenObj.one,
-                two: rating === 2 ? 1 + bewertungenObj.two : bewertungenObj.two,
-                three: rating === 3 ? 1 + bewertungenObj.three : bewertungenObj.three,
-                four: rating === 4 ? 1 + bewertungenObj.four : bewertungenObj.four,
-                five: rating === 5 ? 1 + bewertungenObj.five : bewertungenObj.five,
-                rate: bewertungenObj.rate + 1,
-                bewertungen: ((bewertungenObj.five*5 + bewertungenObj.four*4 + bewertungenObj.three*3 + bewertungenObj.two*2 + bewertungenObj.one + rating)/(bewertungenObj.rate + 1)).toFixed(0)
-            }
-            console.log('bewertungenObj_', bewertungenObj_);
-            this.setState({bewertungenObj: bewertungenObj_ });
-            localStorage.removeItem(`${this.props.data.title}`);
-            localStorage.setItem(`${this.props.data.title}`, JSON.stringify(bewertungenObj_));
-        }
-        else
-        {
-            let bewertungenObj = {
-                one: rating === 1 ? 1 : 0,
-                two: rating === 2 ? 1 : 0,
-                three: rating === 3 ? 1 : 0,
-                four: rating === 4 ? 1 : 0,
-                five: rating === 5 ? 1 : 0,
-                rate: 1,
-                bewertungen: rating
-            }
-            localStorage.setItem(`${this.props.data.title}`, JSON.stringify(bewertungenObj));
-            this.setState({bewertungenObj})
-        }
     }
 
 
@@ -100,8 +42,8 @@ export default class SegmentAd extends React.Component {
                         <Grid divided>
                             <Grid.Row>
                                 <Grid.Column textAlign='center' verticalAlign='middle'>
-                                    <img src={this.props.data.imgLogoName}/>
-                                    <p><b>{this.props.data.descriptionText}</b></p>
+                                    <img src={data.imgLogoName}/>
+                                    <p><b>{data.descriptionText}</b></p>
                                     <Divider/>
                                 </Grid.Column>
                             </Grid.Row>
@@ -119,14 +61,16 @@ export default class SegmentAd extends React.Component {
                             <Grid.Column verticalAlign='middle' textAlign='center'>
                                     <div
                                         style={{ marginRight: '0px', height: '100%', marginTop: '1px'}}>
-                                        <img src={this.props.data.codeImg}/></div>
-                                    <p><b> {this.state.bewertungenObj.rate} bewertungen
-                                        <br/> <br/>5 sterne {this.state.bewertungenObj.five}
-                                        <br/>4 sterne {this.state.bewertungenObj.four}
-                                        <br/>3 sterne {this.state.bewertungenObj.three}
-                                        <br/>2 sterne {this.state.bewertungenObj.two}
-                                        <br/>1 sterne {this.state.bewertungenObj.one}</b></p>
-                                    <Rating icon='star' rating={this.state.bewertungenObj.bewertungen} maxRating={5} onRate={this.handleRate}/>
+                                        <img src={data.codeImg}/></div>
+                                    <p><b> _ bewertungen
+                                        <br/>
+                                        <br/>5 sterne _
+                                        <br/>4 sterne _
+                                        <br/>3 sterne _
+                                        <br/>2 sterne _
+                                        <br/>1 sterne _
+                                    </b></p>
+                                    <Rating icon='star' rating={5} maxRating={5} onRate={this.handleRate}/>
                                 <br/>
                                 <Divider/>
                                 <Icon link name={this.state.showMore ? 'chevron circle up' : 'chevron circle down'}
@@ -142,13 +86,13 @@ export default class SegmentAd extends React.Component {
                             </Grid.Row>}
                             {this.state.showMore && <Grid.Row>
                                 <Grid.Column textAlign='justified' verticalAlign='middle'>
-                                    <p><b>{this.props.data.moreInfoText}</b></p>
+                                    <p><b>{data.moreInfoText}</b></p>
                                     <Divider/>
                                 </Grid.Column>
                                 </Grid.Row>}
                             {this.state.showMore && <Grid.Row>
                                 <Grid.Column verticalAlign='middle'>
-                                    <img src={this.props.data.moreInfoImg2}/>
+                                    <img src={data.moreInfoImg2}/>
                                 </Grid.Column>
                             </Grid.Row>}
                         </Grid>
@@ -161,13 +105,13 @@ export default class SegmentAd extends React.Component {
             return (
                 <div style={{color: '#153753'}}>
                     <Segment raised color='blue'>
-                        <h2><b>{this.props.data.title}</b></h2>
+                        <h2><b>{data.title}</b></h2>
                         <Divider/>
                         <Grid columns={3} divided>
                             <Grid.Row>
                                 <Grid.Column textAlign='center' verticalAlign='middle'>
-                                    <img src={this.props.data.imgLogoName}/>
-                                    <p><b>{this.props.data.descriptionText}</b></p>
+                                    <img src={data.imgLogoName}/>
+                                    <p><b>{data.descriptionText}</b></p>
                                     <Icon link name={this.state.showMore ? 'chevron circle up' : 'chevron circle down'}
                                           color='blue' size='big'
                                           onClick={() => this.setState({showMore: !this.state.showMore})}/>
@@ -183,27 +127,29 @@ export default class SegmentAd extends React.Component {
                                 <Grid.Column verticalAlign='middle' textAlign='center'>
                                     <div
                                         style={{float: 'left', marginRight: '13px', height: '100%', marginTop: '20px'}}>
-                                        <img src={this.props.data.codeImg}/></div>
-                                    <p><b> {this.state.bewertungenObj.rate} bewertungen
-                                        <br/> <br/>5 sterne {this.state.bewertungenObj.five}
-                                        <br/>4 sterne {this.state.bewertungenObj.four}
-                                        <br/>3 sterne {this.state.bewertungenObj.three}
-                                        <br/>2 sterne {this.state.bewertungenObj.two}
-                                        <br/>1 sterne {this.state.bewertungenObj.one}</b></p>
-                                    <Rating icon='star' rating={this.state.bewertungenObj.bewertungen} maxRating={5} onRate={this.handleRate}/>
+                                        <img src={data.codeImg}/></div>
+                                    <p><b> _ bewertungen
+                                        <br/>
+                                        <br/>5 sterne _
+                                        <br/>4 sterne _
+                                        <br/>3 sterne _
+                                        <br/>2 sterne _
+                                        <br/>1 sterne _
+                                    </b></p>
+                                    <Rating icon='star' rating={5} maxRating={5} onRate={this.handleRate}/>
                                 </Grid.Column>
                             </Grid.Row>
                             {this.state.showMore && <Divider/>}
                             {this.state.showMore && <Grid.Row>
 
                                 <Grid.Column verticalAlign='middle'>
-                                    <img src={this.props.data.moreInfoImg1}/>
+                                    <img src={data.moreInfoImg1}/>
                                 </Grid.Column>
                                 <Grid.Column textAlign='justified' verticalAlign='middle'>
-                                    <p><b>{this.props.data.moreInfoText}</b></p>
+                                    <p><b>{data.moreInfoText}</b></p>
                                 </Grid.Column>
                                 <Grid.Column verticalAlign='middle'>
-                                    <img src={this.props.data.moreInfoImg2}/>
+                                    <img src={data.moreInfoImg2}/>
                                 </Grid.Column>
                             </Grid.Row>
                             }

@@ -23,6 +23,12 @@ const Img5 = "http://hawd-design.net/rijad/wendoos-2/images/14.png";
 const Img6 = "http://hawd-design.net/rijad/wendoos-2/images/15.png";
 const Img7 = "http://hawd-design.net/rijad/wendoos-2/images/16.png";
 
+const writeJsonFile = require('write-json-file');
+
+(async () => {
+    await writeJsonFile('foo.js', {foo: true});
+})();
+
 const numberOfSegmentAds = 10;
 
 export default class Wendoos extends React.Component {
